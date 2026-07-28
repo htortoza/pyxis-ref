@@ -1,18 +1,23 @@
 :host { display: block; }
 
-.bridge {
+.bridge-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.bridge-heading {
   display: flex;
   flex-direction: column;
-  gap: 0.875rem;
-  padding: 1.25rem;
-  background: var(--p-surface-0);
-  border: 1px solid var(--p-content-border-color);
-  border-radius: var(--p-border-radius-md, 6px);
+  gap: 0.125rem;
 }
 
 .bridge-title {
   margin: 0;
-  font-size: 0.9375rem;
+  font-size: 1.125rem;
   font-weight: 700;
   color: var(--p-text-color);
 }
@@ -20,9 +25,15 @@
 /* Rótulo explícito: este panel opera sobre periodo de EMISIÓN, no sobre la fecha de corte
    (spec §4.2) -- debe quedar visible, no solo documentado en un comentario. */
 .bridge-subtitle {
-  margin: -0.5rem 0 0;
-  font-size: 0.75rem;
+  margin: 0;
+  font-size: 0.8125rem;
   color: var(--p-text-muted-color);
+}
+
+.bridge-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
 }
 
 .bridge-headline {

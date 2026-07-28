@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Card } from 'primeng/card';
 import { Select } from 'primeng/select';
 import { Tooltip } from 'primeng/tooltip';
 
@@ -49,7 +50,7 @@ function pctAbove(bigger: number, reference: number): number {
 @Component({
   selector: 'app-concentracion-cartera',
   standalone: true,
-  imports: [LoadingSkeletonComponent, Select, FormsModule, Tooltip],
+  imports: [LoadingSkeletonComponent, Select, FormsModule, Tooltip, Card],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './concentracion-cartera.html',
   styleUrl: './concentracion-cartera.css',

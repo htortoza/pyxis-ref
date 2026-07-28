@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Card } from 'primeng/card';
 import { SelectButton } from 'primeng/selectbutton';
 import { Tooltip } from 'primeng/tooltip';
 
@@ -117,7 +118,7 @@ function buildGapHeadline(buckets: ProjectionBucket[], granularity: ProjectionGr
 @Component({
   selector: 'app-recaudacion-projection',
   standalone: true,
-  imports: [FormsModule, SelectButton, Tooltip, LoadingSkeletonComponent],
+  imports: [FormsModule, SelectButton, Tooltip, LoadingSkeletonComponent, Card],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './recaudacion-projection.html',
   styleUrl: './recaudacion-projection.css',

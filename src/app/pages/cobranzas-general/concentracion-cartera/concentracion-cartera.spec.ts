@@ -109,7 +109,10 @@ describe('ConcentracionCarteraComponent', () => {
     const expected = buildConcentrationRows(service.scopedDocuments(), COUNTERPARTIES, COUNTERPARTY_BEHAVIORS, 'saldo');
     expect(expected.rows.length).toBe(1);
 
-    expect(fixture.nativeElement.querySelector('.concentration')).toBeNull();
+    // El panel entero (card + header) queda fuera del DOM cuando isVisible() es false -- ya no hay
+    // una sola clase raíz `.concentration` (reemplazada por <p-card>), así que se verifica la
+    // ausencia del header en vez de la sección casera de antes.
+    expect(fixture.nativeElement.querySelector('.concentration-header')).toBeNull();
     expect(fixture.nativeElement.querySelector('app-loading-skeleton')).toBeNull();
   });
 

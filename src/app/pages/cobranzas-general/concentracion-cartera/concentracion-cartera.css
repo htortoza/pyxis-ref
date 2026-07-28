@@ -1,32 +1,35 @@
 :host { display: block; }
 
-.concentration {
-  display: flex;
-  flex-direction: column;
-  gap: 0.875rem;
-  padding: 1.25rem;
-  background: var(--p-surface-0);
-  border: 1px solid var(--p-content-border-color);
-  border-radius: var(--p-border-radius-md, 6px);
-}
-
 .concentration-header {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.concentration-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
 }
 
 .concentration-title {
   margin: 0;
-  font-size: 0.9375rem;
+  font-size: 1.125rem;
   font-weight: 700;
   color: var(--p-text-color);
 }
 
 .concentration-sort-select {
   min-width: 220px;
+}
+
+.concentration-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
 }
 
 /* Mismo tono rojo sutil que el realce de fila, para que el texto de síntesis y la fila resaltada

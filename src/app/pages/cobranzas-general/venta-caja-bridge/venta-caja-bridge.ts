@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { Card } from 'primeng/card';
 
 import { LoadingSkeletonComponent } from '../../../components/shared/loading-skeleton/loading-skeleton';
 import type { VentaCajaBridgeSegment } from '../../../data/utils/venta-caja-bridge.utils';
@@ -20,7 +21,7 @@ import { CollectionsDataService } from '../../../services/collections-data.servi
 @Component({
   selector: 'app-venta-caja-bridge',
   standalone: true,
-  imports: [LoadingSkeletonComponent, RouterLink],
+  imports: [LoadingSkeletonComponent, RouterLink, Card],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './venta-caja-bridge.html',
   styleUrl: './venta-caja-bridge.css',

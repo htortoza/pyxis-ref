@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
+import { Card } from 'primeng/card';
 import { Tooltip } from 'primeng/tooltip';
 
 import type { AgingBucket } from '../../../data/utils/collections-aging.utils';
@@ -38,7 +39,7 @@ const CROSS_FILTER_DIMENSION = 'aging-bucket';
 @Component({
   selector: 'app-aging-chart',
   standalone: true,
-  imports: [LoadingSkeletonComponent, Tooltip],
+  imports: [LoadingSkeletonComponent, Tooltip, Card],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './aging-chart.html',
   styleUrl: './aging-chart.css',

@@ -1,16 +1,15 @@
 :host { display: block; }
 
-.recaudacion-projection {
+.projection-header {
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  padding: 1.25rem;
-  background: var(--p-surface-0);
-  border: 1px solid var(--p-content-border-color);
-  border-radius: var(--p-border-radius-md, 6px);
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
 }
 
-.projection-header {
+.projection-heading {
   display: flex;
   flex-direction: column;
   gap: 0.125rem;
@@ -18,15 +17,21 @@
 
 .projection-title {
   margin: 0;
-  font-size: 0.9375rem;
+  font-size: 1.125rem;
   font-weight: 700;
   color: var(--p-text-color);
 }
 
 .projection-subtitle {
   margin: 0;
-  font-size: 0.75rem;
+  font-size: 0.8125rem;
   color: var(--p-text-muted-color);
+}
+
+.projection-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 /* Trampa del IVA: la Proyección SIEMPRE opera en bruto -- si el toggle Con/Sin IVA de la pantalla
